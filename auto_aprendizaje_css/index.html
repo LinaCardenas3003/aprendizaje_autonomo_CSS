@@ -93,12 +93,44 @@
     <p disabled>parrafo del ejemplo al tener el atributo disabled </p>
     <p>Sin embargo, no todo resulta tan sencillo como el ejemplo anterior. Existen diversas maneras de emplear los atributos en CSS, algunas de ellas son muy potentes y flexibles. Estas se basan en un concepto denominado expresiones regulares,aunque no se ajustan estrictamente a la definición de expresiones regulares.</p>
     <img src="images/atributos.jpeg" alt="">
-    <h3>BÁSICOS</h3>
-    <p><strong>Atributo </strong>[href]<br>
-      <strong>Descripción: </strong>Seleccionamos por etiqueta. Aplicamos estilos a todas las etiquetas que coincidan.<br>
-      <strong>Ejemplo 1: </strong> todos los elementos que sean etiquetas HTML "strong" se visualizarán de color azul.<br>
-      <strong>Ejemplo 2: </strong>Se le indicará al navegador que aplique un color de fondo azul a todas las etiquetas "div" encontradas en la página. La sección en la que se ha colocado div se denomina selector.
-    </p>
-  </section>
+
+    <!-- Básicos -->
+    <strong>[href]:</strong> Todos los enlaces "< a >" con href serán fucsia.
+    <a href="http://127.0.0.1:5500/auto_aprendizaje_css/index.html#top">Enlace con href</a><br>
+
+    <strong>href="#top": </strong>Si el enlace tiene exactamente href="#top", el texto será rojo.
+    <a href="#top">Ir arriba</a>
+
+    <p class="miclase"><strong>[class~="miclase"]: </strong>Los elementos con la clase "miclase" tendrán fondo amarillo y padding.</p>
+    
+    <p lang="es-MX"><strong>[lang|="es"]: </strong> Si el atributo lang empieza con es, el texto será verde e itálico. Este párrafo tiene un atributo "es-MX."</p>
+
+    <!-- Avanzados -->
+    <strong>[href^="https://"]: </strong> Los enlaces que empiezan con https:// tendrán un subrayado azul grueso.
+    <a href="https://ejemplo.com">Enlace seguro.</a><br>
+
+    <strong>[href$=".pdf"]: </strong> Si el enlace termina en .pdf, el texto será naranja.
+    <a href="documento.pdf">Descargar PDF</a><br>
+
+    <strong>[href*="miclase"]: </strong>  Si el href contiene la palabra miclase, tendrá un fondo turquesa.
+    <a href="https://ejemplo.com/miclase">Enlace con miclase en el href</a> 
+    <hr>
+
+    <h3>Atributo con valor exacto</h3>
+    <p>La potencia de los atributos CSS es que podemos indicar el valor exacto que deben tener para que sean seleccionados. Para ello, simplemente utilizamos el símbolo = y escribimos el texto entre comillas dobles: a[rel="nofollow"]</p>
+    <a href="https://ejemplo.com" rel="nofollow">Enlace no seguido</a> <!-- Será afectado por CSS -->
+    <a href="https://ejemplo.com" rel="noopener">Enlace seguro</a> <!-- No será afectado -->
+    <a href="https://ejemplo.com" rel="nofollow noo">Enlace combinado</a> <!-- No será afectado porque el valor no es exactamente "nofollow" -->
+    <p>Este ejemplo selecciona los enlaces <a> que tienen un atributo rel establecido a nofollow y le pone fondo rojo y letra blanca. </p>
+    <hr>
+
+    <h3>Atributo con lista de palabras</h3>
+    <p data-mood="feliz relajado">Estoy tranquilo y feliz</p>  <!-- Se verá con fondo verde -->
+    <p data-mood="triste">Hoy no es mi mejor día</p>  <!-- No se verá afectado -->
+    <p data-mood="feliz emocionado">¡Qué gran día!</p>  <!-- Se verá con fondo verde -->
+    <p data-mood="relajado">Descansando un poco</p>  <!-- No se verá afectado -->
+
+    </section>
+
 </body>
 </html>

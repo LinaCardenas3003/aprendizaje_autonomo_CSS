@@ -73,3 +73,50 @@ button[disabled] {
   color: #20f3f3;
 }
 
+/* Atributos Básicos */
+[href] {
+  color: rgb(255, 0, 200);
+  text-decoration: underline;
+}
+
+[href="#top"] {
+  color: red;
+}
+
+[class~="miclase"] {
+  background-color: yellow;
+  padding: 20px;
+}
+
+[lang|="es"] {
+  font-style: italic;
+  color: green;
+}
+
+/* Atributos Avanzados */
+[href^="https://"] {
+  border-bottom: 2px solid blue;
+}
+
+[href$=".pdf"] {
+  color: orange;
+}
+
+[href*="miclase"] {
+  background-color: turquoise;
+  padding: 5px;
+}
+
+/* Atributo con valor exacto */
+a[rel="nofollow"] {
+  background: red;
+  color: white;
+  padding: 5px;
+}
+
+/* Atributo con lista de palabras */
+[data-mood~="feliz"] {
+  background: green;
+  color: white;
+  padding: 5px;
+}
