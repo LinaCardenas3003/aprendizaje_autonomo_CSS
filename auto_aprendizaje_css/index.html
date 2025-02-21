@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendizaje Autónomo CSS</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Aprendizaje Autónomo CSS</h1>
+  </header>
+
+  <section>
+
+    <h1>¿Qué es un selector CSS?</h1>
+    <p>Los selectores de CSS son una parte fundamental en la aplicación de estilos en páginas web. Constituyen herramientas esenciales que permiten seleccionar y definir cómo se aplicarán reglas de estilo a elementos específicos de una página. Para comprender mejor este concepto, es importante conocer los distintos tipos de selectores y cómo combinarlos. Un selector de CSS es, en esencia, un código que nos permite especificar qué elemento o elementos deseamos afectar con estilos particulares.</p>
+    <hr>
+
+    <h1>Selectores CSS básicos</h1>
+
+    <h3>Seleccionar por etiquetas</h3>
+    <p><strong>Selector: </strong>div<br>
+      <strong>Descripción: </strong>Seleccionamos por etiqueta. Aplicamos estilos a todas las etiquetas que coincidan.<br>
+      <strong>Ejemplo 1: </strong> todos los elementos que sean etiquetas HTML "strong" se visualizarán de color azul.<br>
+      <strong>Ejemplo 2: </strong>Se le indicará al navegador que aplique un color de fondo azul a todas las etiquetas "div" encontradas en la página. La sección en la que se ha colocado div se denomina selector.
+    </p>
+    <div>
+      <p>Este es un párrafo dentro de un div. El fondo de todos los div es AZUL y la letra sera BLANCA</p>
+    </div>
+    <hr>
+
+    <h3>Seleccionar por ID (únicos)</h3>
+    <p><strong>Selector: </strong>#page<strong><br>
+      Descripción: </strong>Seleccionamos por ID. Aplicamos estilos al elemento que tenga ese id. Debería ser un único elemento.
+    </p>
+    <div id="ejemplo3">
+      <p>Este es un parrafo dentro de un div con un id="ejemplo3". El fondo de este es ROJO</p>
+    </div>
+    <div id="ejemplo4">
+      <p>Este es un parrafo dentro de un div con un id="ejemplo4". El fondo de este es NEGRO</p>
+    </div>
+    <hr>
+
+    <h3>Seleccionar por clases</h3>
+    <p><strong>Selector: </strong>.primary<strong><br>
+      Descripción: </strong>Aplicamos estilos a los elementos que tengan dicha class. La diferencia principal respecto a los id es que las clases no necesitan ser únicas, sino que pueden repetirse a lo largo del documento HTML.
+    </p>
+    <div class="segundo_div">
+      <strong>Ejemplo 5: </strong> Este div tendra un fondo rosa y letra negra su clase es "segundo_div"<br>
+      <strong>Ejemplo 6: </strong> La opcion "1-2-3" son de color turquesa comparten una misma clase llamada "opcion".<br>
+      <strong>Ejemplo 7: </strong> La opcion "Volver" es de color naranja su clase es diferente se llama "back"
+      <p>Seleccione una opción:</p>
+      <button class="opcion">Opción 1</button>
+      <button class="opcion">Opción 2</button>
+      <button class="opcion">Opción 3</button>
+      <button class="back">Volver</button>
+      <p class="ejemplo8">Este es un parrafo con la clase "ejemplo8" su color es marron tiene tamaño y estilo diferente.</p>
+    </div>
+    <hr>
+
+    <h3>Selecciones mixtas</h3>
+    <p><strong>Selector: </strong>button.primary<strong><br>
+      Descripción: </strong>Mixto. Seleccionamos por múltiples criterios. En este caso, por elemento y por clase. es viable emplear múltiples clases en un solo elemento HTML, simplemente separándolas por espacios dentro del atributo class.<br>
+      <strong>Ejemplo 9:  </strong> El primer boton o "Botón principal" como se observa tiene 3 clases y al combinar esas clases en el selector CSS "button.classic.primary.large" se aplica un estilo solo cuando el botón tiene todas esas clases al mismo tiempo. Lo mismo sucede con las casillas la primera tiene una clase llamada "casilla amarilla" y la segunda "casilla roja"
+    </p>
+    <button class="classic primary large">Botón Principal</button>
+    <button class="classic secondary large">Botón Secundario</button>
+    <button class="classic primary small">Botón Extra</button>
+    
+    <div class="casilla amarilla">
+      <h2>Casilla Amarilla</h2>
+      <p>Esta casilla tiene un fondo amarillo.</p>
+    </div>
+    
+    <div class="casilla roja">
+      <h2>Casilla Roja</h2>
+      <p>Esta casilla tiene un fondo rojo.</p>
+    </div>
+
+  </section>
+  <hr>
+
+  <section>
+    
+    <h1>¿Qué son los atributos CSS?</h1>
+    <p>En algunos casos puede que no tengamos clases ni id establecidas, y nos interese dar estilo por otros atributos.</p>
+    <strong>Ejemplo 10: </strong>Al botón desactivado y al parrafo les pongo un atributo disabled. En el CSS pongo "button[disabled]" este selecciona solo los botones con el atributo "disabled" por otro lado al poner solo "[disabled]" solo selecciona cualquier elemento con el atributo "disabled <br>
+    <button>Botón activo</button>
+    <button disabled>Botón desactivado</button>
+    <p disabled>parrafo del ejemplo al tener el atributo disabled </p>
+    <p>Sin embargo, no todo resulta tan sencillo como el ejemplo anterior. Existen diversas maneras de emplear los atributos en CSS, algunas de ellas son muy potentes y flexibles. Estas se basan en un concepto denominado expresiones regulares,aunque no se ajustan estrictamente a la definición de expresiones regulares.</p>
+    <img src="images/atributos.jpeg" alt="">
+    <h3>BÁSICOS</h3>
+    <p><strong>Atributo </strong>[href]<br>
+      <strong>Descripción: </strong>Seleccionamos por etiqueta. Aplicamos estilos a todas las etiquetas que coincidan.<br>
+      <strong>Ejemplo 1: </strong> todos los elementos que sean etiquetas HTML "strong" se visualizarán de color azul.<br>
+      <strong>Ejemplo 2: </strong>Se le indicará al navegador que aplique un color de fondo azul a todas las etiquetas "div" encontradas en la página. La sección en la que se ha colocado div se denomina selector.
+    </p>
+  </section>
+</body>
+</html>

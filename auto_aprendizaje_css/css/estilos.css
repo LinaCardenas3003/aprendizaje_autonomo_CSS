@@ -1,0 +1,75 @@
+/* Seleccionar por etiquetas */
+div {
+  color: white;
+  background-color: blue;
+}
+strong {
+  color: blue;
+}
+
+/* Seleccionar por ID (únicos) */
+#ejemplo3 {
+  background-color: red;
+  color: white;
+}
+#ejemplo4 {
+  background-color: black;
+  color: white;
+}
+
+/* Seleccionar por clases */
+.segundo_div {
+  background-color: rgb(236, 191, 253);
+  color: black;
+}
+.opcion {
+  background-color: turquoise;
+}
+
+.back {
+  background-color: orange;
+}
+
+.ejemplo8{
+  color: maroon;
+  font-size: 22px;
+  font-style: italic;
+}
+
+/* Selecciones mixtas */
+button.classic.primary.large {
+  background-color: rgb(165, 23, 165);
+  color: turquoise;
+  padding: 15px 30px;
+  font-size: 20px;
+}
+
+.casilla.amarilla {
+  background-color: yellow;
+  color: black;
+  width: 400px;
+}
+.casilla.roja {
+  background-color: red;
+  color: black;
+  width: 400px;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Selecciona todos los botones */
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Selecciona solo los botones con el atributo "disabled */
+button[disabled] {
+  background-color: rgb(50, 9, 145);
+  cursor: not-allowed;
+}
+
+/* Selecciona cualquier elemento con el atributo "disabled */
+[disabled] {
+  background-color: black;
+  color: #20f3f3;
+}
+
