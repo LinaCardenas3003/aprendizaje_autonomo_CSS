@@ -14,7 +14,6 @@
   </header>
 
   <section>
-
     <h1>¿Qué es un selector CSS?</h1>
     <p>Los selectores de CSS son una parte fundamental en la aplicación de estilos en páginas web. Constituyen herramientas esenciales que permiten seleccionar y definir cómo se aplicarán reglas de estilo a elementos específicos de una página. Para comprender mejor este concepto, es importante conocer los distintos tipos de selectores y cómo combinarlos. Un selector de CSS es, en esencia, un código que nos permite especificar qué elemento o elementos deseamos afectar con estilos particulares.</p>
     <hr>
@@ -79,12 +78,10 @@
       <h2>Casilla Roja</h2>
       <p>Esta casilla tiene un fondo rojo.</p>
     </div>
-
   </section>
   <hr>
 
   <section>
-    
     <h1>¿Qué son los atributos CSS?</h1>
     <p>En algunos casos puede que no tengamos clases ni id establecidas, y nos interese dar estilo por otros atributos.</p>
     <strong>Ejemplo 10: </strong>Al botón desactivado y al parrafo les pongo un atributo disabled. En el CSS pongo "button[disabled]" este selecciona solo los botones con el atributo "disabled" por otro lado al poner solo "[disabled]" solo selecciona cualquier elemento con el atributo "disabled <br>
@@ -95,7 +92,7 @@
     <img src="images/atributos.jpeg" alt="">
 
     <!-- Básicos -->
-    <strong>[href]:</strong> Todos los enlaces "< a >" con href serán fucsia.
+    <strong>[href]:</strong> Todos los enlaces < a > con href serán fucsia.
     <a href="http://127.0.0.1:5500/auto_aprendizaje_css/index.html#top">Enlace con href</a><br>
 
     <strong>href="#top": </strong>Si el enlace tiene exactamente href="#top", el texto será rojo.
@@ -129,8 +126,219 @@
     <p data-mood="triste">Hoy no es mi mejor día</p>  <!-- No se verá afectado -->
     <p data-mood="feliz emocionado">¡Qué gran día!</p>  <!-- Se verá con fondo verde -->
     <p data-mood="relajado">Descansando un poco</p>  <!-- No se verá afectado -->
+    <p>[data-mood~="feliz"] selecciona solo los elementos donde la palabra "feliz" está en la lista del atributo data-mood. Si el atributo tiene feliz en su lista (como feliz relajado o feliz emocionado), se aplicará el estilo.</p>
+    <hr>
 
-    </section>
+    <h3>Atributo con lista compuesta</h3>
+    <p lang="esi-MX">Este texto está en español de México.</p>  <!-- Se verá con fondo rojo -->
+    <p lang="esi-CO">Este texto está en español de Colombia.</p>  <!-- Se verá con fondo rojo -->
+    <p lang="en-US">This text is in English (USA).</p>  <!-- No se verá afectado -->
+    <p>[lang|="esi"] selecciona los elementos cuyo atributo lang comienza con esi- (ejemplo: esi-MX, esi-CO). Los textos en español tendrán fondo rojo, texto verde y padding.</p>
+    <hr>
+
+    <div class="otro ejemplo">
+      <h3>Comienzo de un atributo</h3>
+      <p>Los atributos CSS permiten seleccionar elementos HTML dependiendo de si empiezan (o acaban) por el valor indicado.</p>
+      
+      <strong>a[href]::after </strong>Aplica a todos los enlaces < a > con href, mostrando su URL después del texto.<br>
+      <strong>a[href^="http://"]::after </strong>Aplica solo a los enlaces que comienzan con "http://", agregando una advertencia de "Página no segura" en rojo.<br>
+      <strong>a[href^="ftp://"]::after </strong>Aplica solo a los enlaces que comienzan con "ftp://", agregando una advertencia de "Descarga desde FTP" en azul.<br>
+      <a href="http://ejemplo.com">Visitar sitio no seguro </a><br>  <!-- Mostrará advertencia -->
+      <a href="https://seguro.com">Visitar sitio seguro </a><br>  <!-- No mostrará advertencia -->
+      <a href="ftp://servidor.com">Descargar desde FTP </a><br>  <!-- Mostrará advertencia especial -->
+      <p>Este método es útil para alertar sobre sitios inseguros, mejorar la accesibilidad y proporcionar información adicional sobre enlaces sin modificar el HTML.</p>
+    </div>
+    <hr>
+
+    <div class="otro ejemplo">
+      <h3>Final de un atributo</h3>
+      <strong>a[href]::before </strong>Agrega un icono genérico antes de todos los enlaces.<br>
+      <strong>a[href$=".pdf"]::before </strong>Si el enlace termina en ".pdf", se cambia el icono a uno específico de PDF.<br>
+      <a href="documento.pdf">Descargar PDF</a><br>
+      <a href="imagen.jpg">Ver Imagen</a><br>
+      <a href="video.mp4">Reproducir Video</a><br>
+      <a href="reporte.pdf">Reporte en PDF</a>
+      <p>Este método es útil para identificar tipos de archivos antes de hacer clic en un enlace, ayudando a la accesibilidad y la usabilidad del sitio web.</p>
+    </div>
+    <hr>
+
+    <h3>Atributo contiene texto</h3>
+    <strong>a[href*="mipagina"] </strong>Aplica estilos a cualquier enlace < a > cuyo href contenga "mipagina" en cualquier parte del enlace. Los enlaces que contienen "mipagina" tendrán un fondo naranja y el texto en azul para destacarlos.<br>
+    <a href="https://mipagina.com">Visitar Mi Página</a><br>
+    <a href="https://otraweb.com/mipagina">Sección en Otra Web</a><br>
+    <a href="https://ejemplo.com">Ejemplo sin coincidencia</a><br>
+    <a href="https://mipagina123.com">Variante de Mi Página</a>
+    <p>Este método es útil para resaltar enlaces relacionados con un tema específico dentro de una página web, ayudando a mejorar la experiencia del usuario y la navegación.</p>
+    <hr>
+    
+    <div class="mayúsculas_minúsculas">
+      
+    </div>
+
+    <div class="mayusculas minusculas">
+      <h3>Mayúsculas y minúsculas</h3>
+      <p>Algo importante que cabe destacar, es que estos fragmentos de código para seleccionar atributos CSS son sensibles a mayúsculas y minúsculas</p>
+      <p>Sin la i, solo se aplicarían estilos a enlaces que terminan exactamente en .pdf (minúsculas). Con la i, se ignoran diferencias entre mayúsculas y minúsculas, por lo que también se seleccionan .PDF, .PdF, .pDf, etc.</p>
+      <a href="documento.pdf">Descargar PDF (minúsculas)</a><br>
+      <a href="archivo.PDF">Descargar PDF (mayúsculas)</a><br>
+      <a href="reporte.PdF">Descargar PDF (mixto)</a><br>
+      <a href="imagen.png">Imagen PNG</a> <!-- No se aplicará el estilo -->
+      <p>Esto es útil para mejorar la accesibilidad y evitar errores cuando los nombres de archivo pueden variar en escritura.</p>
+    </div>
+  </section>
+  <hr>
+
+  <section>
+    <h1>Metodología BEM</h1>
+    <p>La Metodología BEM (Block, Element, Modifier) es un enfoque de nomenclatura de clases en CSS que ayuda a estructurar y organizar el código de manera más clara y mantenible.</p>
+    
+    <h3>Bloque (Block):</h3>
+    <strong>Definición: </strong>Un bloque es un componente independiente y autónomo que tiene un significado propio. Es una entidad visual o de interfaz de usuario que se puede reutilizar.<br>
+    <strong>Convención de nomenclatura: </strong>Utiliza un nombre descriptivo en minúsculas, sin espacios ni caracteres especiales. Para separar palabras, usa guiones (-).
+    
+    <h3>Elemento (Element):</h3>
+    <strong>Definición: </strong>Un elemento es una parte de un bloque que no tiene significado propio y que no se puede reutilizar independientemente del bloque al que pertenece.<br>
+    <strong>Convención de nomenclatura: </strong> El nombre del elemento se construye añadiendo un doble guion bajo (__) al bloque, seguido por el nombre del elemento.
+
+    <h3>Modificador (Modifier): </h3>
+    <strong>Definición: </strong>Un modificador es una variación o estado de un bloque o elemento. Se utiliza para cambiar la apariencia o comportamiento del bloque o elemento sin modificar su estructura principal.<br>
+    <strong>Convención de nomenclatura: </strong>El nombre del modificador se construye añadiendo un doble guion (-) al bloque o elemento, seguido por el nombre del modificador.
+    <p>Esta metodología facilita la identificación y el mantenimiento de estilos, especialmente en proyectos grandes, al proporcionar una estructura clara y jerárquica para las clases de CSS, un ejemplo a continuación:</p>
+    
+    <header class="encabezado">
+      <nav class="encabezado__navegacion">
+        <ul>
+          <li class="menu__item"><a href="#" class="menu__enlace menu__enlace--activo">Inicio</a></li>
+          <li class="menu__item"><a href="#" class="menu__enlace">Acerca de</a></li>
+          <li class="menu__item"><a href="#" class="menu__enlace">Servicios</a></li>
+          <li class="menu__item"><a href="#" class="menu__enlace">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <main class="contenido">
+      <section class="seccion">
+        <h2 class="seccion__titulo">Bienvenido</h2>
+        <p class="seccion__texto">Explora nuestros servicios y descubre lo que podemos ofrecerte.</p>
+      </section>
+    
+      <section class="seccion seccion--destacada">
+        <h2 class="seccion__titulo">Sobre Nosotros</h2>
+        <p class="seccion__texto">Somos una empresa enfocada en brindar soluciones digitales innovadoras.</p>
+      </section>
+    </main>
+    
+    <footer class="pie">
+      <p class="pie__texto">© 2025 Empresa XYZ.</p>
+    </footer>
+
+    <p>Se usaron <strong>bloques</strong> (.encabezado, .menu, .seccion, .pie). Se definieron <strong>elementos </strong>(.menu__enlace, .seccion__titulo). Se aplicaron <strong>modificadores </strong>(.menu__enlace--activo, .seccion--destacada).</p>
+  </section>
+  <hr>
+
+  <section>
+    <h1>Combinadores</h1>
+    <p>Aparte de los selectores CSS básicos, como los de elementos, clases, IDs e incluso atributos, existen múltiples enfoques para crear selectores más avanzados que permiten una selección más precisa y versátil de elementos HTML.</p>
+    <h3>¿Qué es un Combinador CSS?</h3>
+    <p>Un combinador CSS es un símbolo que permite unir dos o más selectores CSS para crear uno más complejo y potente. CSS ofrece varios tipos de combinadores. </p>
+    <table border="1" width="800">
+      <tr>
+        <th>Nombre</th>
+        <th>Simbolo</th>
+        <th>Ejemplo</th>
+        <th>Significado</th>
+      </tr>
+      <tr>
+        <td>Combinador descendiente</td>
+        <td>(espacio)</td>
+        <td>#page div { }</td>
+        <td>Selecciona elementos dentro de otros (cualquier nivel).</td>
+      </tr>
+      <tr>
+        <td>Combinador hijo</td>
+        <td>></td>
+        <td>#page > div { }</td>
+        <td>Selecciona elementos hijos directos (primer nivel).</td>
+      </tr>
+      <tr>
+        <td>Combinador hermano adyacente</td>
+        <td>+</td>
+        <td>div + div { }</td>
+        <td>Selecciona elementos contiguos a otros (mismo nivel).</td>
+      </tr>
+      <tr>
+        <td>Combinador hermano general</td>
+        <td>~</td>
+        <td>div ~ div { }</td>
+        <td>Selecciona elementos que siguen a otros (mismo nivel).</td>
+      </tr>
+      <tr>
+        <td>Combinador universal</td>
+        <td>*</td>
+        <td>#page * { }</td>
+        <td>elecciona todos los elementos de (cualquier nivel).</td>
+      </tr>
+    </table>
+
+    <h3>Combinador descendiente</h3>
+    <p>En CSS, se utiliza el término selector descendiente para referirse a una forma de seleccionar elementos específicos que están contenidos dentro de otros elementos.</p>
+    <div class="contenedor1">
+      <div class="caja">
+        <p>Texto dentro de .caja</p>
+        <span>Otro texto dentro de .caja</span>
+      </div>
+      <p>Texto dentro de .contenedor pero fuera de .caja</p>
+      <p>.contenedor .caja span → Selecciona cualquier <span> que esté dentro de un elemento con clase .caja que, a su vez, esté dentro de .contenedor.</p>
+    </div>
+
+    <div class="contenedor2">
+      <div class="caja">
+        <h2>Título dentro de .caja</h2>
+        <p>Párrafo dentro de .caja</p>
+      </div>
+      <p>Párrafo dentro de .contenedor pero fuera de .caja</p>
+      <p>El primer < p > dentro de .caja tendrá fondo verde claro y texto oscuro. El segundo < p >, que está dentro de .contenedor pero fuera de .caja, no tendrá los estilos aplicados.</p>
+    </div>
+
+    <h3>Combinador hijo</h3>
+    <h3>Combinador hermano contiguo</h3>
+    <h3>Combinador hermano general</h3>
+    <h3>Combinador universal</h3>
+  
+  </section>
+  <hr>
+
+  <section>
+    <h1>Combinadores Lógicos</h1>
+    <h3>¿Qué es un combinador lógico?</h3>
+    <h3>El combinador :is()</h3>
+    <h3>El combinador :where()</h3>
+    <h3>El combinador :has()</h3>
+    <h3>El combinador :not()</h3>
+  </section>
+  <hr>
+
+  <section>
+    <h1>Pseudoclases</h1>
+    <h3>¿Qué es una pseudoclase CSS?</h3>
+    <h3>Tipos de pseudoclases CSS</h3>
+    <h3>Pseudoclases de interacción</h3>
+    <h3>Pseudoclase :hover</h3>
+    <h3>Pseudoclase :active</h3>
+    <h3>Pseudoclase :focus</h3>
+    <h3>Pseudoclase :focus-within</h3>
+    <h3>Pseudoclase :focus-visible</h3>
+    <h3>Pseudoclases de ubicación</h3>
+    <h3>Pseudoclase :any-link</h3>
+    <h3>Pseudoclase :link</h3>
+    <h3>Pseudoclase :visited</h3>
+    <h3>Pseudoclase :target</h3>
+    <h3>Pseudoclase :lang()</h3>
+    <h3>Pseudoclase :dir()</h3>
+    <h3>Pseudoclases de estado</h3>
+    <h3>Pseudoclase :fullscreen</h3>
+    <h3></h3>
+  </section>
 
 </body>
 </html>

@@ -120,3 +120,124 @@ a[rel="nofollow"] {
   color: white;
   padding: 5px;
 }
+
+/* Atributo con lista compuesta */
+[lang|="esi"] {
+  background: rgb(253, 78, 78);
+  color: green;
+  padding: 5px;
+}
+
+
+.otro.ejemplo{
+  background-color: beige;
+  color: black;
+
+  /* Comienzo de un atributo */
+  /* Todos los enlaces mostrarán su URL después del texto */
+  a[href]::after {
+    content: ": " attr(href);
+    display: inline-block;
+    color: #666;
+    font-size: 12px;
+  }
+
+  /* Enlaces que comienzan con http:// (inseguros) */
+  a[href^="http://"]::after {
+    content: " (Página no segura): " attr(href);
+    color: red;
+    font-weight: bold;
+  }
+
+  /* Enlaces que comienzan con ftp:// (descargas) */
+  a[href^="ftp://"]::after {
+    content: " (Descarga desde FTP): " attr(href);
+    color: blue;
+  }
+}
+
+/* Final de un atributo */
+/* Agrega un icono general a todos los enlaces */
+.otro.ejemplo{
+  a[href]::before {
+    content: url("icon_link.png"); /* Icono genérico */
+    padding-right: 5px;
+  }
+  
+  /* Si el enlace termina en .pdf, cambia el icono */
+  a[href$=".pdf"]::before {
+    content: url("icon_pdf.png"); /* Icono de PDF */
+  }
+}
+
+/* Atributo contiene texto */
+a[href*="mipagina"] {
+  background-color: orange;
+  color: blue;
+  padding: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Aplica fondo rojo a cualquier enlace con un href que termine en .pdf o .PDF */
+.mayusculas.minusculas {
+  background-color: rgb(189, 253, 232);
+  color: black;
+
+  a[href$=".pdf" i] {
+    background: rgb(81, 255, 0);
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+/* ====== Metodología BEM ====== */
+.encabezado {
+  background: rgb(59, 59, 59);
+  padding: 20px;
+}
+
+/* Elementos */
+.menu__enlace {
+  color: white;
+}
+
+/* Modificadores */
+.menu__enlace--activo {
+  font-weight: bold;
+  border-bottom: 2px solid yellow;
+}
+
+.seccion {
+  padding: 20px;
+}
+
+.seccion--destacada {
+  background: lightgray;
+}
+
+.pie {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ++++++++++++ Combinadores +++++++++++++ */
+/* Combinador descendiente  */
+.contenedor1 .caja span {
+  background-color: black;
+  color: yellow;
+}
+
+.contenedor2 .caja p {
+  background-color: lightgreen;
+  color: darkgreen;
+  padding: 10px;
+}
+
+
+
+
+
+
