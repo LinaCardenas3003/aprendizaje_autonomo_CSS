@@ -1,3 +1,15 @@
+section {
+  padding: 10px;
+  border: 1px solid gray;
+  margin-top: 10px;
+}
+
+img {
+  width: 350px; /* Ancho fijo */
+  height: auto; /* Ajusta la altura automáticamente */
+}
+
+
 /* Seleccionar por etiquetas */
 div {
   color: white;
@@ -88,7 +100,7 @@ button[disabled] {
   padding: 20px;
 }
 
-[lang|="es"] {
+[lang|="ess"] {
   font-style: italic;
   color: green;
 }
@@ -127,7 +139,6 @@ a[rel="nofollow"] {
   color: green;
   padding: 5px;
 }
-
 
 .otro.ejemplo{
   background-color: beige;
@@ -179,7 +190,7 @@ a[href*="mipagina"] {
   display: inline-block;
 }
 
-/* Aplica fondo rojo a cualquier enlace con un href que termine en .pdf o .PDF */
+/* Aplica fondo verde a cualquier enlace con un href que termine en .pdf o .PDF */
 .mayusculas.minusculas {
   background-color: rgb(189, 253, 232);
   color: black;
@@ -225,17 +236,247 @@ a[href*="mipagina"] {
 
 /* ++++++++++++ Combinadores +++++++++++++ */
 /* Combinador descendiente  */
-.contenedor1 .caja span {
+.combinador.descendiente .caja span {
   background-color: black;
   color: yellow;
 }
 
-.contenedor2 .caja p {
+.combinador.descendiente .caja p{
   background-color: lightgreen;
   color: darkgreen;
   padding: 10px;
 }
 
+/* Combinador hijo */
+.contenedor-principal > .seccion {
+    background-color: lightblue;
+    color: darkblue;
+    padding: 15px;
+    border: 2px solid navy;
+    font-weight: bold;
+}
+
+/* Combinador hermano contiguo */
+.articulo span + span {
+  background-color: gold;
+  color: black;
+  padding: 5px;
+  border: 1px solid darkgoldenrod;
+  font-weight: bold;
+}
+
+/* Combinador hermano general */
+.contenedor p ~ strong {
+  background-color: gold;
+  color: rgb(136, 5, 5);
+  padding: 3px;
+  border: 1px solid rgb(37, 32, 17);
+}
+
+/* Combinador universal */
+#menu * {
+  color: rgb(31, 24, 82);
+  background-color: rgb(85, 163, 211);
+  padding: 5px;
+  border: 1px solid rgb(52, 4, 75);
+}
+
+/* ++++++++++++++++ Combinadores Lógicos ++++++++++++++++++++++++++++ */
+/* Código con duplicación innecesaria agrupación de selectores */
+.letrero.logo {
+  background-color: rgb(204, 148, 107);
+  padding: 10px;
+}
+
+.letrero.alerta {
+  background-color: rgb(204, 148, 107);
+  padding: 10px;
+}
+
+.letrero.advertencia {
+  background-color: rgb(204, 148, 107);
+  padding: 10px;
+}
+
+/* Código CSS optimizado con agrupación de selectores */
+.letrero.logo2,
+.letrero.alerta2,
+.letrero.advertencia2 {
+  background-color: blanchedalmond;
+  color: rgb(112, 78, 6);
+  padding: 10px;
+}
+
+/* El combinador :is() */
+.container :is(.list, .menu, ul) { 
+  color: rgb(22, 255, 162);  /* Especificidad (0,2,0) */
+}
+
+/* El combinador where aplica color verde con :where(), especificidad (0,1,0) */
+.container :where(.list, .element, .menu) { 
+  color: yellow; 
+}
+
+/* El combinador has quita el subrayado a los enlaces que contienen una imagen */
+a:has(> img) {
+  background-color: black !important;
+  color: rgb(61, 226, 43) !important;
+}
+
+/* El combinador not aplica estilos a todos los <p> que NO tienen la clase .general */
+.combinador.not p:not(.general) {
+  padding: 8px;
+  background: #55b8fa;
+}
+
+/* Pseudoclase :hover */
+/* Cambia el fondo cuando el usuario pasa el mouse sobre un enlace */
+.ejemplo-hover a:hover {
+  background-color: cyan;
+  padding: 2px;
+}
+
+/* Si el usuario pasa el mouse sobre un div, cambia el color de los enlaces dentro */
+.ejemplo-hover div:hover a {
+  background-color: steelblue;
+  color: white;
+}
+/* Asegurar que no se afecten otros divs del documento */
+.ejemplo-hover div {
+  background-color: transparent; /* Evita el color azul global */
+}
+
+/* Pseudoclase :active */
+/* Cuando el usuario hace clic en el enlace, cambia su borde y se ajusta el padding */
+a:active {
+  border: 2px solid red;
+  padding: 2px;
+}
+
+/* Pseudoclase :focus */
+/* Cuando un input gana el foco, se cambia el borde y el fondo */
+.ejemplo-focus input:focus {
+  border: 2px solid blue;
+  background-color: #ffb0e1;
+  outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* Pseudoclase :focus-within */
+.ejemplo-focus-within form:focus-within {
+  background: yellow;
+  padding: 10px;
+}
+
+/* Pseudoclase :focus-visible */
+.ejemplo-focus-visible input:focus-visible {
+  border: 2px solid blue;
+  background-color: gold;
+  outline: none; /* Evita el borde predeterminado del navegador */
+}
+
+/* Aplica el estilo SOLO dentro de la clase .ejemplo-any-link */
+.contenedor-enlaces :any-link {
+  background: green;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+
+/* Pseudoclase :link */
+.especial a:link {
+  color: red;
+  text-decoration: underline;
+}
+
+/* Solo afecta los enlaces dentro de .historial cuando han sido visitados */
+.historial a:visited {
+  color: darkgreen;
+  font-style: italic;
+}
+
+/* Pseudoclase :target */
+:target {
+  background: lightblue;
+  color: black;
+  font-weight: bold;
+}
+
+/* Pseudoclase :lang() */
+.idioma-destacado :lang(es) {
+  background: yellow;
+  color: black;
+}
+
+.idioma-destacado :lang(en) {
+  background: blue;
+  color: white;
+}
+
+.idioma-destacado :lang(fr) {
+  background: red;
+  color: white;
+}
+
+/* Pseudoclase :dir() */
+/* Estilos generales para la clase específica */
+.caja-texto {
+  padding: 10px;
+  margin: 10px;
+  font-size: 18px;
+  width: 50%;
+}
+
+/* Si la caja tiene dirección LTR */
+.caja-texto:dir(ltr) {
+  color: black;
+  border-left: 4px solid blue;
+  text-align: left;
+  background-color: #f0f8ff; /* Azul claro */
+}
+
+/* Si la caja tiene dirección RTL */
+.caja-texto:dir(rtl) {
+  color: black;
+  border-right: 4px solid green;
+  text-align: right;
+  background-color: #e6ffe6; /* Verde claro */
+}
+
+
+/* Pseudoclase :fullscreen */
+/* Simulación de pantalla completa cuando el usuario lo activa */
+.screen {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+:fullscreen {
+  display: block;
+  background: white;
+  border: 3px solid red;
+}
+
+/* Pseudoclase :root */
+/* Establece el fondo predeterminado para la raíz (root) */
+:root {
+  --fondo-principal: black; /* Variable para el fondo */
+  --color-texto: white; /* Variable para el color del texto */
+}
+
+/* Estilos aplicados solo al contenedor */
+.root {
+  background: var(--fondo-principal); /* Usa la variable de fondo */
+  margin: 20px auto; /* Centrado con margen */
+  padding: 20px; /* Espaciado interno */
+  width: 80%; /* Ancho relativo */
+  text-align: center; /* Texto centrado */
+  color: var(--color-texto); /* Usa la variable del color del texto */
+  font-family: Arial, sans-serif; /* Fuente */
+  font-size: 20px; /* Tamaño del texto */
+  border: 3px solid red; /* Borde rojo */
+  border-radius: 10px; /* Bordes redondeados */
+}
 
 
 

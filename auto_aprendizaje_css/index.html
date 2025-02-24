@@ -29,6 +29,7 @@
     <div>
       <p>Este es un párrafo dentro de un div. El fondo de todos los div es AZUL y la letra sera BLANCA</p>
     </div>
+    <img src="images/imagen1.jpeg">
     <hr>
 
     <h3>Seleccionar por ID (únicos)</h3>
@@ -41,6 +42,7 @@
     <div id="ejemplo4">
       <p>Este es un parrafo dentro de un div con un id="ejemplo4". El fondo de este es NEGRO</p>
     </div>
+    <img src="images/imagen2.jpeg">
     <hr>
 
     <h3>Seleccionar por clases</h3>
@@ -58,6 +60,7 @@
       <button class="back">Volver</button>
       <p class="ejemplo8">Este es un parrafo con la clase "ejemplo8" su color es marron tiene tamaño y estilo diferente.</p>
     </div>
+    <img src="images/imagen3.jpeg" alt="">
     <hr>
 
     <h3>Selecciones mixtas</h3>
@@ -78,6 +81,7 @@
       <h2>Casilla Roja</h2>
       <p>Esta casilla tiene un fondo rojo.</p>
     </div>
+    <img src="images/imagen4.jpeg" alt="">
   </section>
   <hr>
 
@@ -88,8 +92,9 @@
     <button>Botón activo</button>
     <button disabled>Botón desactivado</button>
     <p disabled>parrafo del ejemplo al tener el atributo disabled </p>
+    <img src="images/imagen5.jpeg" alt="">
     <p>Sin embargo, no todo resulta tan sencillo como el ejemplo anterior. Existen diversas maneras de emplear los atributos en CSS, algunas de ellas son muy potentes y flexibles. Estas se basan en un concepto denominado expresiones regulares,aunque no se ajustan estrictamente a la definición de expresiones regulares.</p>
-    <img src="images/atributos.jpeg" alt="">
+    <img src="images/atributos.jpeg" alt=""><br>
 
     <!-- Básicos -->
     <strong>[href]:</strong> Todos los enlaces < a > con href serán fucsia.
@@ -100,7 +105,7 @@
 
     <p class="miclase"><strong>[class~="miclase"]: </strong>Los elementos con la clase "miclase" tendrán fondo amarillo y padding.</p>
     
-    <p lang="es-MX"><strong>[lang|="es"]: </strong> Si el atributo lang empieza con es, el texto será verde e itálico. Este párrafo tiene un atributo "es-MX."</p>
+    <p lang="ess-MX"><strong>[lang|="es"]: </strong> Si el atributo lang empieza con ess, el texto será verde e itálico. Este párrafo tiene un atributo "es-MX."</p>
 
     <!-- Avanzados -->
     <strong>[href^="https://"]: </strong> Los enlaces que empiezan con https:// tendrán un subrayado azul grueso.
@@ -119,14 +124,18 @@
     <a href="https://ejemplo.com" rel="noopener">Enlace seguro</a> <!-- No será afectado -->
     <a href="https://ejemplo.com" rel="nofollow noo">Enlace combinado</a> <!-- No será afectado porque el valor no es exactamente "nofollow" -->
     <p>Este ejemplo selecciona los enlaces <a> que tienen un atributo rel establecido a nofollow y le pone fondo rojo y letra blanca. </p>
+    <img src="images/imagen6.jpeg" alt="">
+    <img src="images/imagen7.jpeg" alt="">
     <hr>
-
+    
     <h3>Atributo con lista de palabras</h3>
     <p data-mood="feliz relajado">Estoy tranquilo y feliz</p>  <!-- Se verá con fondo verde -->
     <p data-mood="triste">Hoy no es mi mejor día</p>  <!-- No se verá afectado -->
     <p data-mood="feliz emocionado">¡Qué gran día!</p>  <!-- Se verá con fondo verde -->
     <p data-mood="relajado">Descansando un poco</p>  <!-- No se verá afectado -->
     <p>[data-mood~="feliz"] selecciona solo los elementos donde la palabra "feliz" está en la lista del atributo data-mood. Si el atributo tiene feliz en su lista (como feliz relajado o feliz emocionado), se aplicará el estilo.</p>
+    <img src="images/imagen8.jpeg" alt="">
+    <img src="images/imagen9.jpeg" alt="">
     <hr>
 
     <h3>Atributo con lista compuesta</h3>
@@ -134,6 +143,8 @@
     <p lang="esi-CO">Este texto está en español de Colombia.</p>  <!-- Se verá con fondo rojo -->
     <p lang="en-US">This text is in English (USA).</p>  <!-- No se verá afectado -->
     <p>[lang|="esi"] selecciona los elementos cuyo atributo lang comienza con esi- (ejemplo: esi-MX, esi-CO). Los textos en español tendrán fondo rojo, texto verde y padding.</p>
+    <img src="images/imagen10.jpeg" alt="">
+    <img src="images/imagen11.jpeg" alt="">
     <hr>
 
     <div class="otro ejemplo">
@@ -148,6 +159,7 @@
       <a href="ftp://servidor.com">Descargar desde FTP </a><br>  <!-- Mostrará advertencia especial -->
       <p>Este método es útil para alertar sobre sitios inseguros, mejorar la accesibilidad y proporcionar información adicional sobre enlaces sin modificar el HTML.</p>
     </div>
+    <img src="images/imagen12.jpeg" alt="">
     <hr>
 
     <div class="otro ejemplo">
@@ -160,6 +172,7 @@
       <a href="reporte.pdf">Reporte en PDF</a>
       <p>Este método es útil para identificar tipos de archivos antes de hacer clic en un enlace, ayudando a la accesibilidad y la usabilidad del sitio web.</p>
     </div>
+    <img src="images/imagen13.jpeg" alt="">
     <hr>
 
     <h3>Atributo contiene texto</h3>
@@ -169,11 +182,9 @@
     <a href="https://ejemplo.com">Ejemplo sin coincidencia</a><br>
     <a href="https://mipagina123.com">Variante de Mi Página</a>
     <p>Este método es útil para resaltar enlaces relacionados con un tema específico dentro de una página web, ayudando a mejorar la experiencia del usuario y la navegación.</p>
+    <img src="images/imagen14.jpeg" alt="">
+    <img src="images/imagen15.jpeg" alt="">
     <hr>
-    
-    <div class="mayúsculas_minúsculas">
-      
-    </div>
 
     <div class="mayusculas minusculas">
       <h3>Mayúsculas y minúsculas</h3>
@@ -185,6 +196,8 @@
       <a href="imagen.png">Imagen PNG</a> <!-- No se aplicará el estilo -->
       <p>Esto es útil para mejorar la accesibilidad y evitar errores cuando los nombres de archivo pueden variar en escritura.</p>
     </div>
+    <img src="images/imagen16.jpeg" alt="">
+    <img src="images/imagen17.jpeg" alt="">
   </section>
   <hr>
 
@@ -233,6 +246,7 @@
     </footer>
 
     <p>Se usaron <strong>bloques</strong> (.encabezado, .menu, .seccion, .pie). Se definieron <strong>elementos </strong>(.menu__enlace, .seccion__titulo). Se aplicaron <strong>modificadores </strong>(.menu__enlace--activo, .seccion--destacada).</p>
+    <img src="images/imagen18.jpeg" alt="">
   </section>
   <hr>
 
@@ -282,62 +296,345 @@
 
     <h3>Combinador descendiente</h3>
     <p>En CSS, se utiliza el término selector descendiente para referirse a una forma de seleccionar elementos específicos que están contenidos dentro de otros elementos.</p>
-    <div class="contenedor1">
+    <div class="combinador descendiente">
       <div class="caja">
         <p>Texto dentro de .caja</p>
         <span>Otro texto dentro de .caja</span>
       </div>
       <p>Texto dentro de .contenedor pero fuera de .caja</p>
       <p>.contenedor .caja span → Selecciona cualquier <span> que esté dentro de un elemento con clase .caja que, a su vez, esté dentro de .contenedor.</p>
-    </div>
-
-    <div class="contenedor2">
-      <div class="caja">
-        <h2>Título dentro de .caja</h2>
-        <p>Párrafo dentro de .caja</p>
+      <img src="images/imagen19.jpeg" alt="">
+      <img src="images/imagen20.jpeg" alt="">
       </div>
-      <p>Párrafo dentro de .contenedor pero fuera de .caja</p>
-      <p>El primer < p > dentro de .caja tendrá fondo verde claro y texto oscuro. El segundo < p >, que está dentro de .contenedor pero fuera de .caja, no tendrá los estilos aplicados.</p>
-    </div>
 
     <h3>Combinador hijo</h3>
-    <h3>Combinador hermano contiguo</h3>
-    <h3>Combinador hermano general</h3>
-    <h3>Combinador universal</h3>
+    <p>Aunque el selector descendiente es bastante interesante, nos puede interesar hacer la misma operación, pero en lugar de seleccionar todos los elementos descendientes, seleccione solo los descendientes directos del elemento con el símbolo  > , descartando así nietos y sucesivos.</p>
+    <div class="contenedor-principal">
+      <div class="seccion">Este div es hijo directo de .contenedor-principal</div>
+      
+      <div class="bloque-intermedio">
+        <div class="seccion">Este div está dentro de otro div, NO es hijo directo de .contenedor-principal</div>
+      </div>
   
+      <div class="seccion">Otro div hijo directo de .contenedor-principal</div>
+    </div>
+    <p>El primer <strong>div class="seccion"</strong> dentro de .contenedor-principal → se verá azul claro porque es hijo directo. <br>
+      El segundo <strong>div class="seccion"></strong>, dentro de <strong>div class="bloque-intermedio"</strong> → ❌ NO recibe los estilos, porque no es hijo directo de .contenedor-principal, sino nieto. <br>
+      El tercer <strong>div class="seccion"</strong> dentro de .contenedor-principal → también recibe los estilos, porque es hijo directo.
+    </p>
+    <img src="" alt="">
+    <img src="" alt="">
+
+    <h3>Combinador hermano contiguo</h3>
+    <p>También es factible hacer referencia a elementos hermanos, que son aquellos elementos que están directamente adyacentes al elemento especificado. Utilizando el símbolo  +  en el selector de hermano adyacente, es posible seleccionar elementos hermanos que están uno junto al otro en el mismo nivel.</p>
+    <div class="articulo">
+      <span class="etiqueta">Primera etiqueta (NO se aplica el estilo)</span>
+      <span class="etiqueta">Segunda etiqueta (✅ Se aplica el estilo)</span>
+      <span class="etiqueta">Tercera etiqueta (✅ Se aplica el estilo)</span>
+  
+      <p>Este párrafo interrumpe la secuencia.</p>
+  
+      <span class="etiqueta">Cuarta etiqueta (NO se aplica, porque no está inmediatamente después de otra span)</span>
+    </div>
+    <p>El primer span ❌ NO recibe estilos, porque no tiene otro span antes de él. <br>
+      El segundo span ✅ RECIBE los estilos, porque tiene un span antes. <br>
+      El tercer span ✅ RECIBE los estilos, porque tiene un span antes.
+      El cuarto span ❌ NO recibe estilos, porque antes hay un p, lo que rompe la secuencia.
+    </p>
+    <img src="" alt="">
+    
+    <h3>Combinador hermano general</h3>
+    <p>Si consideramos otras posibilidades en el ejemplo anterior, es posible que necesitemos ser menos específicos. En lugar de seleccionar solo los elementos que son adyacentes, podríamos querer seleccionar todos los hermanos en general, sin requerir que sean adyacentes. Esto se logra utilizando el "selector hermano general, que se representa con el símbolo  ~.</p>
+    <div class="contenedor">
+      <p>Este párrafo no se verá afectado.</p>
+      <strong>Primer elemento fuerte (✅ Se aplica el estilo)</strong><br>
+      <em>Elemento en cursiva (NO se aplica, porque no es un strong)</em><br>
+      <strong>Segundo elemento fuerte (✅ Se aplica el estilo)</strong><br>
+      <span>Un span cualquiera (NO se aplica, porque no es un strong)</span><br>
+      <strong>Tercer elemento fuerte (✅ Se aplica el estilo)</strong>
+    </div>
+    <p>p ~ strong dentro de .contenedor → Significa: "Selecciona todos los strong que sean hermanos de p, sin importar si están adyacentes o no".</p>
+    <p>
+      El p ❌ NO recibe estilos (es solo la referencia). <br>
+      El primer strong ✅ RECIBE los estilos, porque es un hermano posterior de p. <br>
+      El em ❌ NO recibe estilos, porque no es un strong. <br>
+      El segundo strong ✅ RECIBE los estilos, porque es un hermano posterior de p. <br>
+      El span ❌ NO recibe estilos, porque no es un strong.<br>
+      El tercer strong ✅ RECIBE los estilos, porque es un hermano posterior de p.
+    </p>
+    <img src="" alt="">
+
+    <h3>Combinador universal</h3>
+    <p>se simboliza con un asterisco  *  y es la forma de aplicar ciertos estilos en TODOS Y CADA UNO de los elementos HTML correspondientes.</p>
+    <div id="menu">
+      <h2>Menú Principal</h2>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <p>Bienvenido a nuestra página.</p>
+    </div>
+    <p>#menu * → Selecciona todos los elementos dentro de div#menu, sin importar qué tipo de etiqueta sean h2, ul, li, a, p, etc.</p>
   </section>
   <hr>
 
   <section>
     <h1>Combinadores Lógicos</h1>
+    <p>En algunas ocasiones, puede ser deseable agrupar varios selectores con el fin de reducir la cantidad de código o reutilizar bloques de CSS en diversas situaciones, lo que hace que los estilos sean más versátiles y eficientes. La forma más sencilla de conseguir esto, es crear agrupaciones con diferentes selectores separando por comas.</p>
+    <h3>Agrupación de selectores</h3>
+    <div class="letrero logo">Logo</div>
+    <div class="letrero alerta">¡Alerta!</div>
+    <div class="letrero advertencia">Advertencia</div>
+    <p> ⚠️ Problema: El mismo código se repite tres veces, lo que hace el CSS más largo y difícil de mantener.</p>
+    <p> En el siguiente ejemplo repetimos el mismo codigo pero en el css esta mejor optimizado aun asi funciona de la misma forma que el primero.</p>
+    <div class="letrero logo2">Logo</div>
+    <div class="letrero alerta2">¡Alerta!</div>
+    <div class="letrero advertencia2">Advertencia</div>
+
     <h3>¿Qué es un combinador lógico?</h3>
+    <p>Sin embargo, las comas sólo son la forma más sencilla y simple de reutilizar selectores. En CSS, tenemos a nuestra disposición una serie de mecanismos para agrupar o combinar selectores de una forma más potente y flexible.</p>
+
     <h3>El combinador :is()</h3>
+    <p>La pseudoclase funcional  :is()  es un reemplazo práctico de la agrupación de selectores mediante comas, que permite reescribir selectores complejos de una forma mucho más práctica y compacta, ya que permite combinar y acumular con otros selectores anteriores o posteriores a  :is().</p>
+    <div class="container">
+      <div class="list">Soy un elemento de la lista</div>
+      <div class="menu">Soy parte del menú</div>
+      <ul>
+        <li>Ítem 1</li>
+        <li>Ítem 2</li>
+      </ul>
+    </div>
+    <p>Significa que todos los elementos .list, .menu y ul que estén dentro de .container tendrán el texto de color azul. Sin :is(), el código sería más largo.</p>
+    
     <h3>El combinador :where()</h3>
+    <p>Los combinadores `:is() y :where() funcionan igual, pero la diferencia está en la especificidad: :is() → Toma la especificidad del selector más alto dentro de la lista :where() → Siempre tiene especificidad 0, lo que facilita su sobreescritura con otros selectores.</p>
+    <div class="container">
+      <div class="list">Soy un elemento de la lista</div>
+      <div class="element">Soy otro elemento</div>
+      <div class="menu">Soy parte del menú</div>
+    </div>
+    <p>Como :is() tiene mayor especificidad (0,2,0) y :where() (0,1,0), el color final de .list y .menu será verde azulado (por :is()). </p>
+    
     <h3>El combinador :has()</h3>
+    <p>Nos permite seleccionar un elemento padre si contiene ciertos elementos hijos. Es la única pseudoclase en CSS que permite este comportamiento, ya que normalmente los selectores solo funcionan de padre a hijo.</p>
+    <a href="#">Enlace normal</a><br>
+    <a href="#"><img src="imagen.jpg" alt="Imagen dentro del enlace"> Enlace con imagen</a>
+    
     <h3>El combinador :not()</h3>
+    <p> permite seleccionar todos los elementos que NO cumplan una condición dada.</p>
+    <strong>Ejemplo útil:</strong> Aplicar estilos a todos los párrafos < p > excepto los que tienen la clase .general.
+    <div class="combinador not">
+      <p>Este párrafo tendrá el estilo del :not()</p>
+      <p class="general">Este párrafo NO tendrá el estilo porque tiene la clase .general</p>
+      <p>Otro párrafo con el estilo aplicado</p>
+      <p>Los párrafos que NO tienen la clase .general tendrán:</p>
+    </div>
+    <ul>
+      <li>Espaciado interno (padding: 8px).</li>
+      <li>Fondo azul claro (background: #FFF).</li>
+      <li>El párrafo con .general NO recibe estos estilos.</li>
+    </ul>
   </section>
   <hr>
 
   <section>
     <h1>Pseudoclases</h1>
     <h3>¿Qué es una pseudoclase CSS?</h3>
+    <p>Las pseudoclases se utilizan para hacer referencia a elementos HTML que tengan un cierto comportamiento concreto.</p>
     <h3>Tipos de pseudoclases CSS</h3>
-    <h3>Pseudoclases de interacción</h3>
+    <p>Existen múltiples pseudoclases, así que para entenderlas mejor, las categorizamos en las siguientes secciones.</p>
+    <h3>1. Pseudoclase Interacción</h3>
+    <p> relacionadas con acciones de usuario.</p>
+    <table border="1" width="800">
+      <tr>
+        <th>Pseudoclase</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>:hover</td>
+        <td>Selecciona el elemento si el usuario pasa el ratón sobre dicho elemento.</td>
+      </tr>
+      <tr>
+        <td>:active</td>
+        <td>Selecciona el elemento si el usuario se encuentra pulsando dicho elemento.</td>
+      </tr>
+      <tr>
+        <td>:focus</td>
+        <td>Selecciona el elemento cuando tiene el foco (está en primer plano).</td>
+      </tr>
+      <tr>
+        <td>:focus-within</td>
+        <td>Selecciona el elemento si uno de sus miembros hijos ha ganado el foco.</td>
+      </tr>
+      <tr>
+        <td>:focus-visible</td>
+        <td>Selecciona el elemento cuando tiene el foco sólo de forma visible (TAB, por ejemplo).</td>
+      </tr>
+    </table>
+
     <h3>Pseudoclase :hover</h3>
+    <p>La primera de ellas, :hover, es muy útil e interesante, ya que permite aplicar estilos a un elemento justo cuando el usuario pasa el ratón (o más concretamente, un dispositivo apuntador) sobre él. Es una de las pseudoclases más utilizadas.</p>
+    <section class="ejemplo-hover">
+      <p><a href="#">Enlace 1</a></p>
+      <p><a href="#">Enlace 2</a></p>
+      <div>
+        <p><a href="#">Enlace dentro de un div</a></p>
+      </div>
+    </section>
+
     <h3>Pseudoclase :active</h3>
+    <p>Por otro lado, la segunda pseudoclase, :active, permite resaltar los elementos que se encuentran activos, o lo que es lo mismo, elementos que están siendo pulsados en ese instante con el ratón por el usuario. En este ejemplo saldra un borde rojo al oprimir con el mouse.</p>
+    <a href="#">Haz clic aquí</a>
+    
     <h3>Pseudoclase :focus</h3>
+    <p>Cuando estamos escribiendo en un campo de texto de un formulario de una página web, generalmente pulsamos TAB para cambiar al siguiente campo y SHIFT+TAB para volver al anterior. Cuando estamos posicionados en un elemento, se dice que ese elemento tiene el foco, mientras que al pulsar TAB y saltar a otro, solemos decir que pierde el foco. También es posible ganar o perder el foco pulsando con el ratón en un elemento.</p>
+    <section class="ejemplo-focus">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre"><br><br>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+  
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono">
+    </section>
+    <p>Cuando un usuario hace clic en un campo de entrada o navega con TAB, el borde se vuelve azul y el fondo cambia a un color rosado.</p>
+    
     <h3>Pseudoclase :focus-within</h3>
+    <p>La pseudoclase :focus-within permite darle estilo no solo al elemento que tiene el foco, sino también a los elementos contenedores relacionados con el elemento que gana el foco.</p>
+    <section class="ejemplo-focus-within">
+      <form>
+        <label>Nombre: <input type="text"></label>
+        <label>Email: <input type="email"></label>
+      </form>
+    </section>
+    
     <h3>Pseudoclase :focus-visible</h3>
-    <h3>Pseudoclases de ubicación</h3>
+    <p> Es prácticamente idéntico a :focus, solo que podemos aplicar estilos al elemento que gana el foco, pero sólo cuando se ha ganado el foco exclusivamente de forma visible, como por ejemplo, pulsando la tecla TAB y accediendo al elemento. Esto puede resultar muy útil cuando quieres que el foco coincida con un tema visual para la página.</p>
+    <section class="ejemplo-focus-visible">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre"><br><br>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+  
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono">
+    </section>
+    <p>Para ver el efecto, usa la tecla TAB para moverte entre los campos de entrada. Solo el campo con foco visible tendrá un borde azul.</p>
+    
+    <h3>2. Pseudoclases de ubicación</h3>
+    <table border="1" width="800">
+      <tr>
+        <th>Pseudoclase</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>:any-link</td>
+        <td>Selecciona un elemento que es un enlace.
+      </tr>
+      <tr>
+        <td>:link</td>
+        <td>Selecciona un elemento que es un enlace no visitado aún.
+      </tr>
+      <tr>
+        <td>:target</td>
+        <td>Selecciona un elemento que coincide con el ancla de la URL actual.</tr>
+    </table>
+
     <h3>Pseudoclase :any-link</h3>
+    <p>se puede hacer referencia, como dice su nombre, a elementos que sean cualquier tipo de enlaces. En este caso, y si no se delimitan de alguna forma, incluye etiquetas <a> y <area>, ya que ambas se consideran enlaces.</p>
+    <p>Solo los enlaces dentro de la siguiente sección serán estilizados.</p>
+    <section class="contenedor-enlaces">
+      <p><a href="#">Enlace dentro de la sección</a></p>
+      <p><a href="#">Otro enlace dentro de la sección</a></p>
+    </section>
+    <p>Este <a href="#">enlace fuera de la sección</a> no será afectado.</p>
+    
     <h3>Pseudoclase :link</h3>
+    <p>Por otro lado, la pseudoclase :link permite seleccionar enlaces a páginas que aún no han sido visitadas por el navegador del usuario, lo que puede ser interesante para personalizar el color de este tipo de enlaces.</p>
+    <strong>Ejemplo: </strong>Cambiar el color y estilo de los enlaces no visitados. Los enlaces que aún no han sido visitados aparecerán en rojo subrayado.
+    <section class="especial">
+      <p><a href="https://www.ejemplo.com" target="_blank">Enlace especial no visitado</a></p>
+      <p><a href="https://www.google.com" target="_blank">Otro enlace especial</a></p>
+    </section>
+
     <h3>Pseudoclase :visited</h3>
+    <p>También tenemos la pseudoclase :visited, que se utiliza para seleccionar y dar estilo a los enlaces que hayan sido visitados previamente en el navegador del usuario. </p>
+    <section class="historial">
+      <p><a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr#" target="_blank">Enlace visitado especial</a></p>
+      <p><a href="https://www.youtube.com/watch?v=1J5CIzQAlgY" target="_blank">Otro enlace visitado especial</a></p>
+    </section>
+
     <h3>Pseudoclase :target</h3>
+    <p>Podemos seleccionar un elemento HTML donde su id (ancla) coincida con el ancla que tenemos actualmente en la URL de navegación. Ideal para seleccionar cabeceras de secciones a modo de ancla en un documento HTML.</p>
+    <nav>
+      <a href="#seccion1">Ir a Sección 1</a> |
+      <a href="#seccion2">Ir a Sección 2</a> |
+      <a href="#seccion3">Ir a Sección 3</a>
+    </nav>
+    <section id="seccion1">Esta es la Sección 1.</section>
+    <section id="seccion2">Esta es la Sección 2.</section>
+    <section id="seccion3">Esta es la Sección 3.</section>
+    <p>Cuando se haga clic en "Ir a Sección 1", el fondo de esa sección cambiará a azul claro.</p>
+    
+    <h3>3. Pseudoclases de idioma</h3>
+    <p>:lang(es) : Selecciona elementos con el idioma español, es decir, atributo lang="es". :dir(value) : Selecciona elementos con la dirección indicada (ltr o rtl).</p>
+    
     <h3>Pseudoclase :lang()</h3>
+    <p>Anteriormente ya habiamos visto un poco sobre este atributo. El atributo HTML lang permite indicar en una etiqueta HTML el idioma en el que está el contenido de sus elementos hijos. De esta forma, un atributo lang="es" indica que el contenido de esa etiqueta se encuentra generalmente en español. La pseudoclase :lang() acepta por parámetro un idioma (o una lista de ellos separados por comas) para seleccionar el elemento HTML que coincida con uno de ellos.</p>
+    <div class="idioma-destacado">
+      <p lang="es">Este es un párrafo en español.</p>
+      <p lang="en">This is a paragraph in English.</p>
+      <p lang="fr">Ceci est un paragraphe en français.</p>
+    </div>
+    <p lang="es">Este párrafo en español no será afectado.</p>
+
     <h3>Pseudoclase :dir()</h3>
-    <h3>Pseudoclases de estado</h3>
+    <p>permite seleccionar elementos dependiendo de la dirección que tienen establecida. Generalmente, la direccionalidad del texto se establece con el atributo dir, indicándole el valor ltr (left to right) o el valor rtl (right to left), sin embargo, con valores como auto o sin valores indicados, también tendrán una direccionalidad dependiendo del lenguaje establecido en el documento o fragmento.</p>
+    <p>Este es un texto normal que no se ve afectado por la pseudoclase.</p>
+
+    <div class="caja-texto" dir="ltr">
+        <p>Texto en dirección izquierda a derecha (LTR).</p>
+    </div>
+
+    <div class="caja-texto" dir="rtl">
+        <p>نص باللغة العربية (RTL).</p>
+    </div>
+
+    <h3>4. Pseudoclases de estado</h3>
+    <p>Existen una serie de pseudoclases para comprobar el estado visual de un elemento que se considera modal, es decir, que «centran» la interacción del usuario en un elemento principal (y sus hijos) y no permiten la interacción con otros elementos hasta que se cierre ese elemento principal.</p>
     <h3>Pseudoclase :fullscreen</h3>
-    <h3></h3>
+    <p>Mediante la pseudoclase :fullscreen podemos seleccionar elementos que se encuentren en modo pantalla completa, lo que habitualmente se realiza mediante la API FullScreen de Javascript.</p>
+    <div class="screen" id="screen">
+      <p>Colocar esta ventana en pantalla completa</p>
+      <button class="close">Cerrar</button>
+    </div>
+    <button onclick="document.getElementById('screen').requestFullscreen()">Pantalla Completa</button>
+  </section>
+  <hr>
+
+  <section>
+    <h1>Pseudoclases de estructura</h1>
+    <p>Existe una amplia gama de pseudoclases que permiten seleccionar elementos de un documento HTML según su posición y/o estructura en el documento.</p>
+    <h3>Elementos raíz</h3>
+    <p>Existen algunas pseudoclases con las que podemos hacer referencia al elemento padre raíz del documento donde estamos trabajando. En el caso de estar trabajando en un documento HTML, el elemento raíz es <html>, mientras que en el caso de estar trabajando en un componente, el elemento raíz es el propio componente. Las pseudoclases que podemos usar en cada caso son las siguientes:</p>
+    
+    <h3>Pseudoclase :root</h3>
+    <p> hace referencia al elemento raíz del documento HTML, o lo que es lo mismo, la etiqueta <html>. Sin embargo, en muchas ocasiones se puede ver que, en lugar de utilizar directamente la etiqueta, se utiliza la pseudoclase :root. Al ser una pseudoclase, tiene una especificidad CSS más alta (0,1,0) que el elemento html, el cuál, al ser una etiqueta HTML, tiene una especificidad más baja (0,0,1):</p>
+    <h1>Bienvenido a mi página</h1>
+    <p>Este es un párrafo de ejemplo que forma parte del contenido general del documento.</p>
+    <p>El siguiente contenedor tendrá estilos aplicados de forma específica.</p>
+
+    <!-- Solo este div tendrá los estilos aplicados -->
+    <section class="root">
+        <h2>Sección estilizada</h2>
+        <p>Este contenido está dentro del contenedor con estilos aplicados.</p>
+        <p>El fondo aquí es negro, el texto es blanco y hay un borde rojo.</p>
+    </section>
+
+    <p>Después del contenedor, el contenido sigue con su estilo normal.</p>
   </section>
 
 </body>
