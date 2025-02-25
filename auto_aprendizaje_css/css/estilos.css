@@ -4,11 +4,9 @@ section {
   margin-top: 10px;
 }
 
-img {
-  width: 350px; /* Ancho fijo */
-  height: auto; /* Ajusta la altura automáticamente */
+.recordatorio_div{
+  color: red !important;
 }
-
 
 /* Seleccionar por etiquetas */
 div {
@@ -260,7 +258,7 @@ a[href*="mipagina"] {
 .articulo span + span {
   background-color: gold;
   color: black;
-  padding: 5px;
+  padding: 2px;
   border: 1px solid darkgoldenrod;
   font-weight: bold;
 }
@@ -457,28 +455,233 @@ a:active {
   border: 3px solid red;
 }
 
-/* Pseudoclase :root */
-/* Establece el fondo predeterminado para la raíz (root) */
+/* Variables globales definidas en :root */
 :root {
-  --fondo-principal: black; /* Variable para el fondo */
-  --color-texto: white; /* Variable para el color del texto */
+  --color-primario: #1E90FF;
+  --color-secundario: #FFD700;
+  --color-terciario: #FF6347;
+  --espaciado: 15px;
+  --sombra: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos aplicados solo al contenedor */
-.root {
-  background: var(--fondo-principal); /* Usa la variable de fondo */
-  margin: 20px auto; /* Centrado con margen */
-  padding: 20px; /* Espaciado interno */
-  width: 80%; /* Ancho relativo */
-  text-align: center; /* Texto centrado */
-  color: var(--color-texto); /* Usa la variable del color del texto */
-  font-family: Arial, sans-serif; /* Fuente */
-  font-size: 20px; /* Tamaño del texto */
-  border: 3px solid red; /* Borde rojo */
-  border-radius: 10px; /* Bordes redondeados */
+/* Estilos globales */
+body {
+  background: rgba(243, 226, 226, 0.578);
+  color: black;
+  font-family: cursive, sans-serif;
+}
+
+/* Aplicar estilos solo a la sección específica */
+.root .caja {
+  width: 150px;
+  height: 100px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+}
+
+.root .caja-1 {
+  background: var(--color-primario);
+}
+
+.root .caja-2 {
+  background: var(--color-secundario);
+  color: black;
+}
+
+.root .caja-3 {
+  background: var(--color-terciario);
+}
+
+/* Header y footer SOLO dentro de .root */
+.root header {
+  background: var(--color-primario);
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.root footer {
+  width: 97%;
+  padding: var(--espaciado);
+  background: var(--color-secundario);
+  box-shadow: var(--sombra);
+  border-radius: 5px;
+}
+
+/* +++++++ Pseudoclase :first-child ++++++++++++++ */
+.ejemplo-first-child {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre los bloques */
+}
+
+.elementos {
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.elemento {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+
+/* Estilos para el primer .element dentro de cada .elements */
+.elementos:first-child .elemento:first-child {
+  background-color: lightblue;
+}
+
+.elementos:nth-child(2) .elemento:first-child {
+  background-color: lightcoral;
+}
+
+/* +++++++ Pseudoclase :last-child ++++++++++++++ */
+.ejemplo.last-child{
+  background-color: black;
+  p strong:last-child {
+    background-color: lightgreen;
+    padding: 2px;
+  }
+}
+
+/* +++++++ Pseudoclase :nth-child() +++++++ */
+/* Aplica color azul solo al segundo hijo */
+.ejemplo-nth-child p:nth-child(2) {
+  color: blue;
+  font-weight: bold;
+}
+/* Aplica un fondo negro a todos los elementos que sean múltiplos de 3 */
+.ejemplo-nth-child p:nth-child(3n) {
+  background-color: black;
+  padding: 5px !important;
+}
+/* Aplica un fondo azul claro a los elementos pares */
+.ejemplo-nth-child p:nth-child(2n) {
+  background-color: rgb(94, 200, 250) !important;
+}
+
+/* +++++++ Pseudoclase :nth-last-child() +++++++ */
+/* Aplica color azul solo al segundo hijo */
+.ejemplo-nth-last-child p:nth-last-child(2) {
+  color: blue;
+  font-weight: bold;
+}
+/* Aplica un fondo negro a todos los elementos que sean múltiplos de 3 */
+.ejemplo-nth-last-child p:nth-last-child(3n) {
+  background-color: black;
+  padding: 5px !important;
+}
+/* Aplica un fondo azul claro a los elementos pares */
+.ejemplo-nth-last-child p:nth-last-child(2n) {
+  background-color: rgb(94, 200, 250) !important;
+}
+
+/* +++++++ Pseudoclase :nth-child(A of B) ++++++++*/
+/* Aplica un fondo naranja al segundo botón con la clase .importante */
+.A-of-B :nth-child(2 of .importante) {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+}
+
+/* Estilos generales para los botones */
+.boton {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Bordes rojos para los botones con clase .importante */
+.importante {
+  border: 2px solid red;
 }
 
 
+/* ++++++++++++ Pseudoclase :nth-of-type() ++++++++++ */
+/* Aplica un fondo azul claro al segundo <div> dentro de .nth-of-type */
+.nth-of-type div:nth-of-type(2) {
+  color: black;
+  background-color: lightblue;
+  padding: 10px;
+  font-weight: bold;
+}
 
+/* Aplica un fondo verde claro al cuarto <div> dentro de .nth-of-type */
+.nth-of-type div:nth-of-type(4) {
+  color: black;
+  background-color: lightgreen;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* ++++++++++++ Pseudoclase :nth-last-of-type() ++++++++++ */
+/* Aplica un fondo azul claro al segundo <div> contando desde el final dentro de .nth-last-of-type */
+.nth-last-of-type div:nth-last-of-type(2) {
+  color: black;
+  background-color: lightblue;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Aplica un fondo verde claro al cuarto <div> empezando desde el final dentro de .nth-last-of-type */
+.nth-last-of-type div:nth-last-of-type(4) {
+  color: black;
+  background-color: lightgreen;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Pseudoclase :only-child */
+/* Aplica estilos solo si el elemento es hijo único */
+.only-child :only-child {
+  background-color: fuchsia;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Pseudoclase :only-of-type */
+/* Aplica estilos solo a elementos que sean únicos en su tipo dentro del only-of-type */
+.only-of-type p:only-of-type,
+.only-of-type span:only-of-type {
+    background-color: lightblue;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Pseudoclase :empty */
+/* Aplica estilos solo a los elementos realmente vacíos */
+.ejemplo:empty {
+  border: 3px solid red;
+  background-color: lightgray;
+  width: 150px;
+  height: 50px;
+  margin: 10px 0;
+}
+
+/* Estilos generales para mejor visualización */
+.ejemplo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
 
 
