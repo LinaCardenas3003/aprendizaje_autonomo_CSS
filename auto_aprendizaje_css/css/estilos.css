@@ -141,6 +141,7 @@ a[rel="nofollow"] {
 .otro.ejemplo{
   background-color: beige;
   color: black;
+  display: inline;
 
   /* Comienzo de un atributo */
   /* Todos los enlaces mostrarán su URL después del texto */
@@ -568,7 +569,7 @@ body {
 }
 
 /* +++++++ Pseudoclase :nth-last-child() +++++++ */
-/* Aplica color azul solo al segundo hijo */
+/* Aplica color azul solo al segundo hijo contando desde el final */
 .ejemplo-nth-last-child p:nth-last-child(2) {
   color: blue;
   font-weight: bold;
@@ -591,6 +592,11 @@ body {
   font-weight: bold;
 }
 
+/* Bordes rojos para los botones con clase .importante */
+.importante {
+  border: 2px solid red;
+}
+
 /* Estilos generales para los botones */
 .boton {
   display: block;
@@ -601,12 +607,6 @@ body {
   text-align: center;
   font-size: 16px;
 }
-
-/* Bordes rojos para los botones con clase .importante */
-.importante {
-  border: 2px solid red;
-}
-
 
 /* ++++++++++++ Pseudoclase :nth-of-type() ++++++++++ */
 /* Aplica un fondo azul claro al segundo <div> dentro de .nth-of-type */

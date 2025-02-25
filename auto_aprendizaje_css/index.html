@@ -754,7 +754,6 @@
       <p>Elemento 3</p>
       <p>Elemento 4</p>        
       <p>Elemento 5</p>
-      <p>Elemento 6</p>
     </div>
     <ul>
       <li>p:nth-child(2) → Aplica color azul al segundo hijo</li>
@@ -771,7 +770,11 @@
       <p>Elemento 4</p>        
       <p>Elemento 5</p>
       <p>Elemento 6</p>
+      <p>Elemento 7</p>        
+      <p>Elemento 8</p>
+      <p>Elemento 9</p>
     </div>
+    <img src="images/imagen40.jpeg" alt="" width="500">
     
     <h3>Pseudoclase :nth-child(A of B)</h3>
     <p>Permite hacer selecciones más precisas dentro de un grupo de elementos que cumplen ciertas condiciones. <br>
@@ -915,19 +918,78 @@
 
     <h3>Pseudoclase :empty</h3>
     <p>Permite seleccionar los elementos que estén vacíos. Ojo con esto, ya que el navegador no considerará vacío el elemento que contiene espacios en blanco. </p>
-    <!-- ✅ Elemento realmente vacío -->
+    <!-- Elemento realmente vacío -->
     <div class="ejemplo empty-1"></div>
 
-    <!-- ❌ Contiene espacios en blanco -->
+    <!-- Contiene espacios en blanco -->
     <div class="ejemplo empty-2"> </div>
 
-    <!-- ❌ Contiene un comentario HTML -->
+    <!-- Contiene un comentario HTML -->
     <div class="ejemplo empty-3">
       <!-- Esto es un comentario -->
     </div>
+    <img src="images/imagen41.jpeg" alt="" width="300">
     <p> Con este ejemplo puedes ver cómo :empty realmente solo se aplica a elementos sin nada dentro.</p>
   </section>
+  <hr>
 
+  <section>
+    <h1>Reglas</h1>
+    <p>En CSS tenemos las denominadas «at-rules» (reglas precedidas del carácter @). Son un tipo de declaración especial que permite indicar comportamientos especiales en muchos contextos. Su sintaxis suele determinarse incluyendo una palabra clave que comienza por @ (como por ejemplo @media o @import) y dependiendo de la regla en cuestión, puede tener una sintaxis u otra. <br>En términos generales, las "at-rules" se pueden ubicar en cualquier parte de la hoja de estilos, ya sea al principio, en medio o al final. No obstante, algunas reglas tienen restricciones específicas.</p>
+    
+    <h3>La regla @import</h3>
+    <p> Permite cargar un fichero .css externo, leer sus líneas de código e incorporarlo al archivo actual. Estas reglas CSS se suelen indicar en las primeras líneas del fichero, ya que deben figurar antes de otras reglas CSS o contenido CSS similar.</p>
+    <table border="1" witdh="700">
+      <tr>
+        <th>Tipo de importación</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>@import</td>
+        <td>Importamos una hoja de estilos CSS externa.</td>
+      </tr>
+      <tr>
+        <td>@import  media query</td>
+        <td>Importamos una hoja de estilos CSS sólo si condide con el media query indicado.</td>
+      </tr>
+      <tr>
+        <td>@import  supports(condición)</td>
+        <td>Importamos una hoja de estilos CSS sólo si el navegador soporta la condición.</td>
+      </tr>
+      <tr>
+        <td>@import  layer(nombre)</td>
+        <td>Importamos una hoja de estilos CSS y la colocamos en la capa nombre.</td>
+      </tr>
+      <tr>
+        <td>@import  layer()</td>
+        <td>Importamos una hoja de estilos CSS y la colocamos en una nueva capa anónima.</td>
+      </tr>
+    </table>
+    <p>Un detalle muy importante es que hay que tener en cuenta que la regla @import se evalua en el navegador a la hora de cargar la página, por lo que cada regla @import equivale a una petición al servidor de un nuevo archivo .css</p>
+    
+    <h3>Formato de @import</h3>
+    <p>En principio, existen dos formas de cargar ficheros externos mediante la regla @import: utilizando la función url() o indicando simplemente un  con el archivo o dirección URL:</p>
+    <table border="1" witdh="700">
+      <tr>
+        <th>Formato</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>@import url("fichero.css")</td>
+        <td>Importa el fichero.css utilizando la función url() de CSS.</td>
+      </tr>
+      <tr>
+        <td>@import "fichero.css"</td>
+        <td>Importa el fichero.css utilizando una ruta relativa.</td>
+      </tr>
+    </table>
+
+    <h3>Importaciones condicionales</h3>
+    <p>Dentro de las importaciones que se pueden realizar utilizando la regla @import, existen dos tipos de importaciones condicionales. Por un lado, es posible indicar una media query después de la declaración @import. Esto permite que la hoja de estilos externa se descargue y procese solo si el navegador cumple con las condiciones especificadas en la media query. Por otro lado, se puede combinar la regla @supports con @import para establecer condiciones específicas.</p>
+  
+    <h3>Import con media queries</h3>
+    <p></p>
+  </section>
 
 </body>
 </html>
